@@ -1,109 +1,115 @@
+'use client'
+
+import { useLanguage } from '@/components/language-provider'
+
 export default function About() {
+  const { t } = useLanguage()
+
   return (
-    <section id="about" className="py-20 px-6 lg:px-8 bg-gray-50">
+    <section id="about" className="py-20 px-6 lg:px-8 bg-gray-50 dark:bg-zinc-900">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-sm tracking-widest text-gray-500 mb-4">
-              SOBRE MÍ
+            <p className="text-sm tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+              {t('about_titulo')}
             </p>
-            <h2 className="text-5xl lg:text-6xl font-light tracking-tight text-black mb-8">
-              Ingeniero apasionado por soluciones de alto impacto
+            <h2 className="text-5xl lg:text-6xl font-light tracking-tight text-black dark:text-white mb-8">
+              {t('about_subtitulo')}
             </h2>
           </div>
 
           <div className="space-y-6">
-            <p className="text-lg text-gray-600 font-light leading-relaxed">
-              Con más de 8 años de experiencia en desarrollo full stack e ingeniería de sistemas, he liderado la construcción de arquitecturas escalables que procesan millones de transacciones diarias. Mi enfoque combina excelencia técnica con pensamiento estratégico para resolver desafíos empresariales complejos.
+            <p className="text-lg text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+              {t('about_parrafo1')}
             </p>
 
-            <p className="text-lg text-gray-600 font-light leading-relaxed">
-              Especializado en diseño de infraestructura cloud, optimización de performance y transformación digital. He trabajado con equipos multinacionales en startups de rápido crecimiento y empresas Fortune 500, siempre enfocado en entregar valor tangible y sostenible.
+            <p className="text-lg text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+              {t('about_parrafo2')}
             </p>
 
             <div className="space-y-4 pt-6">
-              <h3 className="text-sm font-semibold tracking-widest text-black">
-                FORMACIÓN
+              <h3 className="text-sm font-semibold tracking-widest text-black dark:text-white">
+                {t('about_formacion')}
               </h3>
               <div>
-                <p className="text-sm font-medium text-black">
-                  Ingeniería de Sistemas
+                <p className="text-sm font-medium text-black dark:text-white">
+                  {t('about_carrera1')}
                 </p>
-                <p className="text-sm text-gray-600">
-                  Universidad Nacional de Colombia
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {t('about_universidad')}
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-black">
-                  Especialización en Cloud Architecture
+                <p className="text-sm font-medium text-black dark:text-white">
+                  {t('about_carrera2')}
                 </p>
-                <p className="text-sm text-gray-600">
-                  AWS Solutions Architect Associate
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {t('about_cloud')}
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-20 pt-20 border-t border-gray-200">
-          <p className="text-sm tracking-widest text-gray-500 mb-8">
-            EXPERIENCIA LABORAL
+        <div className="mt-20 pt-20 border-t border-gray-200 dark:border-zinc-700">
+          <p className="text-sm tracking-widest text-gray-500 dark:text-gray-400 mb-8">
+            {t('about_experiencia')}
           </p>
           <div className="space-y-8">
-            <div className="pb-8 border-b border-gray-200">
+            <div className="pb-8 border-b border-gray-200 dark:border-zinc-700">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                 <div>
-                  <h4 className="text-lg font-light text-black">
-                    Senior Full Stack Engineer
+                  <h4 className="text-lg font-light text-black dark:text-white">
+                    {t('about_exp1_titulo')}
                   </h4>
-                  <p className="text-sm text-gray-600">
-                    TechCorp Solutions
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {t('about_exp1_empresa')}
                   </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-2 md:mt-0">
-                  2021 - Presente
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
+                  {t('about_exp1_periodo')}
                 </p>
               </div>
-              <p className="text-sm text-gray-600 font-light">
-                Liderazgo técnico en arquitectura de microservicios, reducción del 40% en latencia de APIs y mentoring de 5+ desarrolladores junior.
+              <p className="text-sm text-gray-600 dark:text-gray-400 font-light">
+                {t('about_exp1_desc')}
               </p>
             </div>
 
-            <div className="pb-8 border-b border-gray-200">
+            <div className="pb-8 border-b border-gray-200 dark:border-zinc-700">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                 <div>
-                  <h4 className="text-lg font-light text-black">
-                    Full Stack Developer
+                  <h4 className="text-lg font-light text-black dark:text-white">
+                    {t('about_exp2_titulo')}
                   </h4>
-                  <p className="text-sm text-gray-600">
-                    InnovateLabs
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {t('about_exp2_empresa')}
                   </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-2 md:mt-0">
-                  2018 - 2021
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
+                  {t('about_exp2_periodo')}
                 </p>
               </div>
-              <p className="text-sm text-gray-600 font-light">
-                Desarrollo de plataforma de e-commerce que procesaba 1M+ transacciones diarias, implementación de CI/CD pipeline completo.
+              <p className="text-sm text-gray-600 dark:text-gray-400 font-light">
+                {t('about_exp2_desc')}
               </p>
             </div>
 
             <div>
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                 <div>
-                  <h4 className="text-lg font-light text-black">
-                    Junior Developer
+                  <h4 className="text-lg font-light text-black dark:text-white">
+                    {t('about_exp3_titulo')}
                   </h4>
-                  <p className="text-sm text-gray-600">
-                    Digital First Agency
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {t('about_exp3_empresa')}
                   </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-2 md:mt-0">
-                  2016 - 2018
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
+                  {t('about_exp3_periodo')}
                 </p>
               </div>
-              <p className="text-sm text-gray-600 font-light">
-                Desarrollo de aplicaciones web responsivas, APIs REST y mantenimiento de infraestructura.
+              <p className="text-sm text-gray-600 dark:text-gray-400 font-light">
+                {t('about_exp3_desc')}
               </p>
             </div>
           </div>

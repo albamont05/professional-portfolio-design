@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <main className="bg-white">
+      <main>
         <Hero />
         <About />
         <Projects />
